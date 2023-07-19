@@ -16,3 +16,7 @@ jobs:
       with:
         gradle-version: release-candidate
     - run: gradle build
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Package
+        path: build/libs
